@@ -9,3 +9,5 @@ Email credentials are handled securely using environment variables instead of ha
 This project demonstrates practical implementation of Python automation concepts, including system monitoring, file handling, SMTP-based email automation, multithreading, and structured logging. It serves as a strong example of real-world automation scripting and can be extended further for production-level monitoring systems.
 
 The reposotory contains 2 files in which The Log File contains The information That has to bee upload on Mail and the Surviellince system contains the actual code.
+
+There is another File name RoughMail.py that contains A simple draft for mail Automation.
