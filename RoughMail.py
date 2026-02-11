@@ -44,14 +44,14 @@ def main():
     subject="Test mail for python Script"
 
     body="Jay ganesh" \
-    "This is a Script By Marvellous Infosystem " \
+    
     "Regards" \
     "Ashutosh Gunjal"
 
     Send_Email(sender_email,app_password,recivers_email,subject,body)
 
 
-    print("Marvelous mail Send Succesfully")
+    print(" Mail Send Succesfully")
 
 
     
