@@ -11,3 +11,11 @@ This project demonstrates practical implementation of Python automation concepts
 The reposotory contains 2 files in which The Log File contains The information That has to bee upload on Mail and the Surviellince system contains the actual code.
 
 There is another File name RoughMail.py that contains A simple draft for mail Automation.
+
+How To Run -  
+Open Terminal 
+Reach To the File Adderss
+Argv[0]=python, 
+Argv[2]=Script Name ,
+Argv[3]= TimeStamp,
+Argv[4]=Folder name in which you wnat to store the thelog file.
