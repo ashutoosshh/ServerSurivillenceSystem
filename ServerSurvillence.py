@@ -18,7 +18,7 @@ def Send_Email(sender_email, app_password, recivers_email,
 
     msg.set_content(body)
 
-    # ---------- ATTACH LOG FILE ----------
+   
     with open(attachment_path, "rb") as f:
         file_data = f.read()
         file_name = os.path.basename(attachment_path)
@@ -29,7 +29,6 @@ def Send_Email(sender_email, app_password, recivers_email,
         subtype="octet-stream",
         filename=file_name
     )
-    # -------------------------------------
 
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
         smtp.login(sender_email, app_password)
@@ -119,7 +118,7 @@ def CreateLog(FolderName):
 def ProcessScan():
     listprocess = []
 
-    # Warm up for CPU percent
+  
     for proc in psutil.process_iter():
         try:
             proc.cpu_percent()
@@ -132,7 +131,7 @@ def ProcessScan():
         try:
             info = proc.as_dict(attrs=["pid", "name", "username","status","create_time"])
             
-            # Convert create_time
+           
             try:
                 info["create_time"] = time.strftime("%Y-%m-%d %H:%M:%S",time.localtime(info["create_time"]))
             except:
@@ -150,7 +149,7 @@ def ProcessScan():
 def main():
 
     sender_email = "ashutoshgunjal09@gmail.com"
-    app_password = "pgpeookqyuystfea"
+    #app_password = "Add your App password"
     recivers_email = "ashotosh_gunjal_it@moderncoe.edu.in"
 
     subject = "Test mail for python Script"
@@ -179,10 +178,7 @@ def main():
             print("DirectoryName : Name of directory for logs")
 
         else:
-            print("Unable to proceed as there is no such option")
-            print("Please use --h or --u")
 
-    # python Demo.py 5 Marvellous
     elif (len(sys.argv) == 3):
 
         print("Inside projects logic")
@@ -195,7 +191,7 @@ def main():
         try:
             while True:
 
-                # -------- THREADING (FIXED LOGIC) --------
+               
 
                 log_file_path = None
 
@@ -205,9 +201,9 @@ def main():
 
                 t1 = threading.Thread(target=LogThread)
                 t1.start()
-                t1.join()   # WAIT till log generation completes
+                t1.join()  
 
-                # -------- EMAIL AFTER LOG CREATION --------
+               -
 
                 body = f"""Jay Ganesh,
 
